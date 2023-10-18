@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(#E9F2F5, #CEE0E7);
+  font-family: 'Roboto';
+}
+
+figure {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 0px;
+  transition: transform 1.5s 0.5s;
+}
+
+figure:hover { 
+  transform: scale(1.5, 1.5) translateY(20px) rotateX(360deg) rotateZ(360deg);
+}
+
+figcaption {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background-color: #2B436D;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.7em;
+  padding: 4px;
+}
+
+h2 {
+  margin: 8px 0px;
+  font-size: 1.55em;
+}
+
+.card {
+  box-shadow: 0px 0px 10px #D9D4C8;
+  width: 380px;
+  background-color: white;
+  border-radius: 5px;
+  transition-property: overflow;
+  transition-duration: 3s;
+}
+
+.card:active {
+  animation-name: shake;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.def {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.category {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.95em;
+  color: #7D7D7D;
+}
+
+.content {
+  padding: 20px;
+}
+
+.saveForLater {
+  position: relative;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #7D7D7D;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top: solid 1px #ffeded;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.saveForLater:hover {
+  background-color: #ffb3b3;
+  color: white;
+}
+
+.saveForLater:active {
+  box-shadow: 0px -2px 3px #ffeded;
+  transform: translate(0px, 2px);
+}
